@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="297.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+   <children>
+      <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="274.0" prefWidth="302.0">
+        <columns>
+          <TableColumn fx:id="col1" prefWidth="150.0" text="K(i)" />
+          <TableColumn fx:id="col2" prefWidth="150.0" text="Y(i)" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonStart" layoutX="360.0" layoutY="253.0" mnemonicParsing="false" onAction="#buttonStartAction" prefWidth="200.0" text="Выполнить задание" />
+      <TextField fx:id="aTextField" layoutX="383.0" layoutY="136.0" />
+      <Label layoutX="360.0" layoutY="140.0" text="a = " />
+      <TextField fx:id="bTextField" layoutX="383.0" layoutY="171.0" />
+      <Label layoutX="360.0" layoutY="175.0" text="b = " />
+      <Button fx:id="buttonRandom" layoutX="360.0" layoutY="220.0" mnemonicParsing="false" onAction="#buttonRandomAction" prefWidth="200.0" text="Заполнить случайными числами" />
+      <Button fx:id="buttonCleanUp" layoutX="700.0" layoutY="220.0" mnemonicParsing="false" onAction="#buttonCleanUpAction" prefWidth="70.0" text="Очистка" />
+      <Button fx:id="buttonExit" layoutX="700.0" layoutY="254.0" mnemonicParsing="false" onAction="#buttonExitAction" prefWidth="70.0" text="Выход" />
+      <Label fx:id="theFirstExceptionLabel" layoutX="580.0" layoutY="236.0" text="МОЖНО ВВОДИТЬ" />
+      <Label fx:id="theSecondExceptionLabel" layoutX="585.0" layoutY="254.0" text="ТОЛЬКО ЧИСЛА!" />
+      <ImageView fitHeight="92.0" fitWidth="450.0" layoutX="327.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/images/Безымянный.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="77.0" layoutX="549.0" layoutY="127.0" stroke="BLACK" strokeType="INSIDE" width="220.0" />
+      <Label fx:id="theFirstArithmeticExceptionLabel" layoutX="567.0" layoutY="130.0" text="Данный пример имеет решение" />
+      <Label fx:id="theSecondArithmeticExceptionLabel" layoutX="609.0" layoutY="148.0" text="при условии, что:" />
+      <Label fx:id="theThirdArithmeticExceptionLabel" layoutX="561.0" layoutY="165.0" text="1. К, a, b одновременно не равны 0">
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Label fx:id="theFourthArithmeticExceptionLabel" layoutX="562.0" layoutY="182.0" text="2. a и б одновременно не равны 0">
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
